@@ -79,6 +79,7 @@ def batting():
     print(f"Computer needs {bat1_score+1} to WIN!!")
     bat2_score=0
     num2_balls=0
+    chasing_score=bat1_score+1
     while True:
         while True:
             try:
@@ -101,14 +102,18 @@ def batting():
         else:
             bat2_score+=computer_bats
             print("Computer current score is: ",bat2_score)
+            chasing_score=chasing_score-computer_bats
+            print(f"Need {chasing_score} to Win")
             if bat2_score>bat1_score:
                 break
     
     if bat1_score>bat2_score:
         difference=bat1_score-bat2_score
-        print(f"\n!!!Player won by {difference} Runs!!!")
+        print(f"\n!!!Player won by {difference} Runs!!!\n")
+    elif bat1_score==bat2_score:
+        print("\n The Game has been Tied\n")
     else:
-        print("\n!!Computer Wins!!    by chasing the target")
+        print("\n!!Computer Wins!!    by chasing the target\n")
 
 #function for computer batting first
 def bowling():
@@ -145,6 +150,7 @@ def bowling():
     print(f"Player needs {bat1_score+1} to WIN!!")
     bat2_score=0
     num2_balls=0
+    chasing_score=bat1_score+1
     while True:
         while True:
             try:
@@ -157,7 +163,7 @@ def bowling():
                 print("Play Properly.")
         
         computer_bowls=int(random.choice(toss))
-        print("\ncomputer bowls is:",computer_bowls)
+        print("\ncomputer bowls :",computer_bowls)
         num2_balls+=1
         if player_bats==computer_bowls:
             print("\n!!!OUT!!!\n")
@@ -167,14 +173,18 @@ def bowling():
         else:
             bat2_score+=player_bats
             print("Player current score is: ",bat2_score)
+            chasing_score=chasing_score-player_bats
+            print(f"Need {chasing_score} to Win")
             if bat2_score>bat1_score:
                 break
 
     if bat1_score>bat2_score:
         difference=bat1_score-bat2_score
-        print(f"\n!!!Computer won by {difference} Runs!!!")
+        print(f"\n!!!Computer won by {difference} Runs!!!\n")
+    elif bat1_score==bat2_score:
+        print("\n The Game has been Tied\n")
     else:
-        print("\n!!Player Wins!!    by chasing the target")
+        print("\n!!Player Wins!!    by chasing the target\n")
 
 # asking bats or bowl
 batorball=["BATTING","BOWLING"]        
