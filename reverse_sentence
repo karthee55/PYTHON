@@ -1,0 +1,8 @@
+def master_yoda(s):
+    x=s.split()
+    y=x[::-1]
+    return " ".join(y)
+# Test case
+#print(master_yoda('i am alone'))  #output: alone am i
+s=input("enter a sentence:")
+print(master_yoda(s))
