@@ -1,0 +1,11 @@
+def has_same(nums,n):
+    for i in range(0,len(nums)-1):
+        if nums[i]==n and nums[i+1]==n:
+            return True
+    else:
+        return False
+        
+nums=list(map(int,input("Enter the list of numbers:").split(',')))
+n=int(input("enter the number to find its adjacent:"))
+print(has_same(nums,n))
+
