@@ -1,0 +1,12 @@
+def animal_crackers(text):
+    words = text.split()
+    if len(words) != 2:
+        return False
+    return words[0][0].lower() == words[1][0].lower()
+
+# Test cases
+print(animal_crackers('Levelheaded Llama'))  # Output: True
+print(animal_crackers('Crazy Kangaroo'))     # Output: False
+
+text=input("enter a text:")
+print(animal_crackers(text))
