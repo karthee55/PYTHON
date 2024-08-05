@@ -1,0 +1,15 @@
+def spy_game(nums):
+    ls=[]
+    res=[0,0,7]
+    for i in nums:
+        if i==0:
+            ls.append(i)
+        elif i==7:
+            ls.append(i)
+    if ls==res:
+        return True
+    else:
+        return False   
+       
+nums=list(map(int,input("Enter the list of numbers:").split(',')))
+print(spy_game(nums))
