@@ -21,3 +21,23 @@ def check_prime(i):
 
 n=int(input('Enter a number to find the number of prime numbers present from 0 to given number:'))
 print(count_primes(n))
+
+
+
+## without using function
+
+n=int(input('Enter a number to find the number of prime numbers present from 0 to given number:'))
+if n<2:
+    count= 0
+count=1
+for i in range(3,n+1):
+    for j in range(2,i):
+        if i%j !=0:
+            result='prime'
+        else:
+            result= 'not prime'
+            break
+    if result=='prime':
+        count +=1
+
+print(count)
