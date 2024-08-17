@@ -1,0 +1,25 @@
+#swapping of two numbers using temporary variables
+a=int(input("enter first number:"))
+b=int(input("enter second number:"))
+temp=a
+a=b
+b=temp
+print("Now first number is:",a)
+print("Now second number is:",b)
+
+
+#swapping of two numbers without using temporary variables
+a=int(input("enter first number:"))
+b=int(input("enter second number:"))
+a=a+b
+b=a-b
+a=a-b
+print("Now first number is:",a)
+print("Now second number is:",b)
+
+#swapping of two numbers 
+a=int(input("enter first number:"))
+b=int(input("enter second number:"))
+a,b=b,a
+print("Now first number is:",a)
+print("Now second number is:",b)
