@@ -1,0 +1,16 @@
+num=(int(input("enter a number:")))
+pow=len(str(num))
+
+res=0
+temp=num
+
+while temp>0:
+    digit=temp%10
+    temp=temp//10
+    res+=digit**pow
+
+
+if res==num:
+  print(f"the number {num} is narcissist number")
+else:
+  print(f"the number {num} is not narcissist number")
